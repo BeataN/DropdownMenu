@@ -1,0 +1,109 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  list-style-type: none;
+}
+/* MENU */
+
+.menu-wrap {
+  background: #4166a0;
+}
+
+.menu {
+  margin: 0px auto 20px;
+}
+
+.menu li {
+  color: white;
+  cursor: pointer;
+}
+
+.menu li ul {
+  display: none;
+}
+
+.menu li:hover > ul {
+  display: block;
+}
+
+.menu .parent {
+  position: relative;
+  display: inline-block;
+  padding: 15px;
+}
+
+.menu .parent:hover {
+  color: #92b1df;
+}
+
+.menu .parent > ul {
+  position: absolute;
+  min-width: 180px;
+  top: 48px;
+}
+
+.menu .child {
+  position: relative;
+  background: #ddd;
+  padding: 15px;
+  color: black;
+}
+
+.menu .child:hover {
+  background: #92b1df;
+}
+
+.menu .child > ul {
+  position: absolute;
+  top: 0;
+  left: 100%;
+}
+
+.menu .grandchild {
+  background: #eee;
+  padding: 15px;
+  min-width: 180px;
+  color: black;
+}
+
+.menu .grandchild:hover {
+  background: #92b1df;
+}
+
+/* CONTENT */
+
+.content-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+}
+
+.content-wrap article {
+  padding: 15px;
+  background: #eee;
+  width: 40%;
+  text-align: center;
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .content-wrap article {
+    width: 100%;
+  }
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .content-wrap article {
+    width: 100%;
+  }
+}
